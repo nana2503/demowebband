@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+/*
+1.vị trí 
+2.kích thước(width,height)
+3.màu sắc
+4.kiểu dáng(kiểu chữ.shape)
+*/
+
+.wrapper {
+
+}
+
+#header {
+    height:  46px;
+    background-color: black;
+    position: fixed;/*bám dính thanh header trên trang khi cuộn*/
+    top: 0;/*bám dính vào top left right*/
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav {
+    display: inline-block;
+    position: relative;
+}
+.nav, .subnav {
+    list-style: none;/*bỏ dấu chấm trước list subnav*/
+}
+.nav > li {
+    display: inline-block;
+}
+.nav > li > a{
+    text-transform: uppercase;
+    cursor:zoom-out;/*thay đổi hình dạng con trỏ chuột cursor*/
+}
+
+.nav li a{
+    color: white;
+    position: relative;
+}
+
+.nav li a {
+    color: blanchedalmond;
+    text-decoration: none;/*bỏ dấu gạch dưới chân của chữ */
+    font-family: Arial, Helvetica, sans-serif;/*font cho tất cả các code*/
+    line-height: 40px;
+    padding: 3px 20px;
+    display: block;    
+}
+.subnav > li > a:hover,/* lồng vô bằng dấu phẩy*/
+.nav > li:hover > a {
+    color: yellow;
+    background: grey;
+}
+
+.nav > li:hover > .subnav{
+    display: block;/*ghi đè và hiện menu*/
+    background: wheat;
+}
+
+.nav .subnav  {
+    position: absolute;/*học lại position về absolute và relative*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) ;
+    display: none;/*ẩn đi menu ẩn */
+    min-width: 160px;/*chiều rộng tối thiểu*/
+    top: 46px;
+    z-index: 1;/*hiện phần nổi của thanh header*/
+
+}
+
+.subnav > li > a {
+    color: #000;
+    padding: 0 13px;
+    line-height: 38px;/*line height = cont top +border top*/
+}
+
+.arrow{
+    font-size: 12px;
+}
+
+#header .searchbtn { 
+    float: right;
+    line-height: 46px;
+    padding: 0 16px;
+}
+
+#header .searchbtn:hover {
+    background: brown;
+}
+
+#header .searchicon {
+    color: #ccc;
+    font-size: 16px;
+}
+
+#slider {
+    padding-top: 50%;  
+    background: url('/webband/assets/img/ny.jpg') top center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 300px;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 67px;
+    color: white;
+    text-align: center;/*căn giữa text ở hình */
+    width: 100%;
+}
+#slider .text-content .text-deading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-content .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+
+#content {
+    background: url(/webband/assets/img/phong-canh-dep-nhat-the-gioi-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+#footer {
+
+}
+
